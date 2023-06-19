@@ -54,8 +54,11 @@ const app = createApp({
             }else{
                 this.currentIndex--;
             }
-        }
+        },
         
+        goToPic(i){
+            return this.currentIndex = i;
+        }
     }
 });
 
