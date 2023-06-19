@@ -21,7 +21,7 @@
         </div>
         <div class="small-screen">
             <div v-for="(image, i) in images" class="bottom-image">
-                <img :src="image.image" alt="" :class="{filter: currentIndex !== i}" @click="goToPic(i)">
+                <img :src="image.image" alt="" :class="{filter: currentIndex !== i}" @click="goToPic(i)" @mouseenter="stopLoop" @mouseleave="continueLoop">
             </div>
         </div>
 
