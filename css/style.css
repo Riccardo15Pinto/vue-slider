@@ -13,18 +13,25 @@
     margin: 0 auto;
 }
 
+/*Icons*/
+
 .fa-solid{
     position: absolute;
     font-size: 1.5rem;
 }
+
 .fa-circle-arrow-right{
     bottom: 43%;
     right: -40px;
 }
+
 .fa-circle-arrow-left{
     top: 50%;
     left: -5%;
 }
+
+/*Main */
+
 .big-screen{
     position: relative;
     width: 900px;
@@ -49,6 +56,8 @@
 .bottom-image{
     flex-basis: calc(100% / 5);
 }
+
+/*utility*/
 
 .filter{
     filter: grayscale(1);
