@@ -20,7 +20,13 @@
             <!-- icon sx -->
             <i class="fa-solid fa-circle-arrow-left" @click="goDown"></i>
             <!-- image gallery -->
-            <img v-for="(image, i) in images" :src="image.image" alt="" v-show="currentIndex === i" >
+            <figure v-for="(image, i) in images" v-show="currentIndex === i">
+                <img :src="image.image" alt=""  >
+                <figcaption>
+                    <h1>{{image.title}}</h1>
+                    <p>{{image.text}}</p>
+                </figcaption>
+            </figure>
             <!-- icon dx -->
             <i class="fa-solid fa-circle-arrow-right" @click="goUp"></i>
         </div>
