@@ -2,14 +2,19 @@
 console.log('ok js');
 console.log('ok vue', Vue);
 
+//decstructuring vue
 const { createApp } = Vue;
 
+//create app
 const app = createApp({
+    //data file
     data(){
         return {
+            //current index
             currentIndex: 0,
+            //set loop for interval
             loop: null,
-            
+            //array content
             images: [
                 {
                     image: 'img/01.webp',
@@ -40,14 +45,15 @@ const app = createApp({
             
         }
     },
-    
+    //add open page
     mounted(){
+        //intervall
         this.loop = setInterval(this.goUp, 3000);
 
     },
-    
-    
+    //metods
     methods: {
+        //click dx icon
         goUp(){
             if(this.currentIndex === this.images.length - 1){
                 this.currentIndex = 0;
@@ -55,7 +61,7 @@ const app = createApp({
                 this.currentIndex++;
             }
         },
-        
+        //click sx icon
         goDown(){
             if(this.currentIndex === 0){
                 this.currentIndex = this.images.length - 1;
@@ -63,16 +69,15 @@ const app = createApp({
                 this.currentIndex--;
             }
         },
-        
+        //on image click
         goToPic(i){
             return this.currentIndex = i;
         },
-        
+        //stop loop on enter
         stopLoop(){
-            
             clearInterval(this.loop)
         },
-
+        //continueLoop on leave
         continueLoop(){
          this.loop = setInterval(this.goUp, 3000)
         }
