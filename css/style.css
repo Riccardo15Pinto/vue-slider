@@ -12,7 +12,21 @@
     width: 1000px;
     margin: 0 auto;
 }
+
+.fa-solid{
+    position: absolute;
+    font-size: 1.5rem;
+}
+.fa-circle-arrow-right{
+    bottom: 43%;
+    right: -40px;
+}
+.fa-circle-arrow-left{
+    top: 50%;
+    left: -5%;
+}
 .big-screen{
+    position: relative;
     width: 900px;
     height: 500px;
     margin: 0 auto;
