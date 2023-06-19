@@ -15,9 +15,9 @@
 <body>
     <div id="root">
         <div class="big-screen">
-            <i class="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-circle-arrow-left" @click="goDown"></i>
             <img v-for="(image, i) in images" :src="image.image" alt="" v-show="currentIndex === i" >
-            <i class="fa-solid fa-circle-arrow-right"></i>
+            <i class="fa-solid fa-circle-arrow-right" @click="goUp"></i>
         </div>
         <div class="small-screen">
             <div v-for="(image, i) in images" class="bottom-image">
