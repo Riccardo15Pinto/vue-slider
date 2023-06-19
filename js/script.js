@@ -2,10 +2,12 @@
 console.log('ok js');
 console.log('ok vue', Vue);
 
+const { createApp } = Vue;
+
 const app = createApp({
     data(){
         return {
-
+            currentIndex: '0',
             images: [
                 {
                     image: 'img/01.webp',
