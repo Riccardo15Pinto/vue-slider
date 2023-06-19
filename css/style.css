@@ -7,3 +7,19 @@
 }
 
 /* Genereics */
+
+#root{
+    width: 1000px;
+    margin: 0 auto;
+}
+.big-screen{
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.big-screen img{
+
+    width: 100%;
+    height: 100%;
+}
