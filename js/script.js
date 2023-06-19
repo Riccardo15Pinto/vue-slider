@@ -43,7 +43,9 @@ const app = createApp({
     
     mounted(){
         this.loop = setInterval(this.goUp, 3000);
+
     },
+    
     
     methods: {
         goUp(){
@@ -65,6 +67,15 @@ const app = createApp({
         goToPic(i){
             return this.currentIndex = i;
         },
+        
+        stopLoop(){
+            
+            clearInterval(this.loop)
+        },
+
+        continueLoop(){
+         this.loop = setInterval(this.goUp, 3000)
+        }
         
     }
     
