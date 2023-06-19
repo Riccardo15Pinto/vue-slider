@@ -8,7 +8,8 @@ const app = createApp({
     data(){
         return {
             currentIndex: 0,
-
+            loop: null,
+            
             images: [
                 {
                     image: 'img/01.webp',
@@ -36,7 +37,12 @@ const app = createApp({
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
             ]
+            
         }
+    },
+    
+    mounted(){
+        this.loop = setInterval(this.goUp, 3000);
     },
     
     methods: {
@@ -47,7 +53,7 @@ const app = createApp({
                 this.currentIndex++;
             }
         },
-
+        
         goDown(){
             if(this.currentIndex === 0){
                 this.currentIndex = this.images.length - 1;
@@ -58,9 +64,11 @@ const app = createApp({
         
         goToPic(i){
             return this.currentIndex = i;
-        }
+        },
+        
     }
+    
+    
 });
-
 //monto nel html
 app.mount('#root');
