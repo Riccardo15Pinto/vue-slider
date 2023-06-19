@@ -8,6 +8,7 @@ const app = createApp({
     data(){
         return {
             currentIndex: 0,
+
             images: [
                 {
                     image: 'img/01.webp',
@@ -39,6 +40,21 @@ const app = createApp({
     },
     
     methods: {
+        goUp(){
+            if(this.currentIndex === this.images.length - 1){
+                this.currentIndex = 0;
+            }else{
+                this.currentIndex++;
+            }
+        },
+
+        goDown(){
+            if(this.currentIndex === 0){
+                this.currentIndex = this.images.length - 1;
+            }else{
+                this.currentIndex--;
+            }
+        }
         
     }
 });
