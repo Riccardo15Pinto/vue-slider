@@ -13,14 +13,22 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- radice vue -->
     <div id="root">
+        <!-- top gallery -->
         <div class="big-screen">
+            <!-- icon sx -->
             <i class="fa-solid fa-circle-arrow-left" @click="goDown"></i>
+            <!-- image gallery -->
             <img v-for="(image, i) in images" :src="image.image" alt="" v-show="currentIndex === i" >
+            <!-- icon dx -->
             <i class="fa-solid fa-circle-arrow-right" @click="goUp"></i>
         </div>
+        <!-- bottom gallary -->
         <div class="small-screen">
+            <!-- container pic -->
             <div v-for="(image, i) in images" class="bottom-image">
+                <!-- images -->
                 <img :src="image.image" alt="" :class="{filter: currentIndex !== i}" @click="goToPic(i)" @mouseenter="stopLoop" @mouseleave="continueLoop">
             </div>
         </div>
