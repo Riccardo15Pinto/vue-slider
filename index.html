@@ -14,11 +14,11 @@
 </head>
 <body>
     <div id="root">
-        <i class="fa-solid fa-circle-arrow-left"></i>
         <div class="big-screen">
+            <i class="fa-solid fa-circle-arrow-left"></i>
             <img v-for="(image, i) in images" :src="image.image" alt="" v-show="currentIndex === i" >
+            <i class="fa-solid fa-circle-arrow-right"></i>
         </div>
-        <i class="fa-solid fa-circle-arrow-right"></i>
         <div class="small-screen">
             <div v-for="(image, i) in images" class="bottom-image">
                 <img :src="image.image" alt="" :class="{filter: currentIndex !== i}">
