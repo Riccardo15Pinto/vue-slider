@@ -11,7 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="roots">
+    <div id="root">
+        <div class="big-screen">
+            <img v-for="(image, index ) in images" :src="image.image" alt="" v-show="currentIndex">
+        </div>
 
     </div>
     <!-- my javascript  -->
